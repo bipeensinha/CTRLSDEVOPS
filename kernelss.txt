@@ -1,0 +1,12 @@
+---
+- hosts: kernelchange
+
+
+  tasks:
+  - name: change kernel parameter
+    sysctl:
+      name: "{{ parameter_name }}"
+      value: "{{ value }}"
+      sysctl_set: "{{ sysct }}"
+      state: "{{ states }}"
+      reload: "{{ reloa }}"
